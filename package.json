@@ -1,6 +1,6 @@
 {
   "name": "json-to-sqm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Outputs ARMA SQM files from JSON",
   "main": "index.js",
   "scripts": {
