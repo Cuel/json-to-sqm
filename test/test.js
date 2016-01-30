@@ -82,11 +82,7 @@ test('it prints the same sqm after conversion', function (t) {
       json = classParser(originalSqm)
     })
 
-    var time = process.hrtime()
     let out = JsonToSqm(json)
-    var diff = process.hrtime(time)
-    console.log('benchmark took %d nanoseconds', diff[0] * 1e9 + diff[1])
-
     t.equals(out, originalSqm, 'read sqm matches output')
     t.end()
   })
