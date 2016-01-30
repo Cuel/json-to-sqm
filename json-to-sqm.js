@@ -5,7 +5,7 @@
     isObject: function (obj) { return Object.prototype.toString.call(obj) === '[object Object]' },
     isString: function (str) { return typeof str === 'string' },
     isNumber: function (nr) { return typeof nr === 'number' },
-    isArray: function (arr) { return Array.isArray(arr) }
+    isArray: Array.isArray
   }
 
   var chars = {
