@@ -11,5 +11,7 @@
   "devDependencies": {
     "arma-class-parser": "^0.1.2",
     "tape": "^4.4.0"
-  }
+  },
+  "url" : "https://github.com/Cuel/json-to-sqm/issues",
+  "keywords": ["arma", "sqm", "json-sqm"]
 }
