@@ -75,7 +75,7 @@ test('it indents several levels', function (t) {
 })
 
 test('it prints the same sqm after conversion', function (t) {
-  fs.readFile('./test/fixture.sqm', 'utf8', function (err, originalSqm) {
+  fs.readFile(__dirname + '/fixture.sqm', 'utf8', function (err, originalSqm) {
     t.ifError(err, 'read fixture file')
     var json
     t.doesNotThrow(function () {
