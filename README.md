@@ -17,6 +17,10 @@ var res = JsonToSqm({"Mission": {}})
 
 `npm test`
 
+## Known issues:
+Floating point numbers (not really an issue with this package)
+E.g `7.3458068e-007` would be `-7.3458068e-7`
+
 ## License
 
 [WTFPL](https://en.wikipedia.org/wiki/WTFPL)

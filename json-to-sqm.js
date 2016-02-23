@@ -4,7 +4,7 @@
   var utils = {
     isObject: function (obj) { return Object.prototype.toString.call(obj) === '[object Object]' },
     isString: function (str) { return typeof str === 'string' },
-    isNumber: function (nr) { return typeof nr === 'number' },
+    isNumber: function (nr) { return (Number(nr) === nr && nr % 1 === 0) || (Number(nr) === nr && nr % 1 !== 0) },
     isArray: Array.isArray
   }
 
@@ -65,12 +65,14 @@
       case utils.isNumber(value): ret += '=' + value
         break
       case utils.isArray(value):
-        var isAddOns = chars.REG_ADDONS.test(key)
-        ret += '[]=' + (!isAddOns ? '{' : (chars.lineBreakIndent(indentLevel) + '{') + chars.LF)
-        if (isAddOns) indentLevel++
-        ret += formatArrayValues(value, indentLevel, isAddOns)
-        if (isAddOns) indentLevel--
-        ret += (!isAddOns ? '}' : (chars.LF + chars.indent(indentLevel) + '}'))
+        var lineBreakAfterValue = !value.every(function (v) {
+          return utils.isNumber(v)
+        })
+        ret += '[]=' + (!lineBreakAfterValue ? '{' : (chars.lineBreakIndent(indentLevel) + '{') + chars.LF)
+        if (lineBreakAfterValue) indentLevel++
+        ret += formatArrayValues(value, indentLevel, lineBreakAfterValue)
+        if (lineBreakAfterValue) indentLevel--
+        ret += (!lineBreakAfterValue ? '}' : (chars.LF + chars.indent(indentLevel) + '}'))
         break
       default: throw new Error('Unexpected type: key' + key + ', value: ' + value)
     }
