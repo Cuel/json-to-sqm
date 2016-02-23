@@ -1,6 +1,6 @@
 {
   "name": "json-to-sqm",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Outputs ARMA SQM files from JSON",
   "main": "index.js",
   "scripts": {
@@ -13,11 +13,11 @@
     "tape": "^4.4.0"
   },
   "repository" : {
-	"type" : "git",
-	"url" : "https://github.com/Cuel/json-to-sqm.git"
+  "type" : "git",
+  "url" : "https://github.com/Cuel/json-to-sqm.git"
   },
   "bugs": {
-	"url" : "https://github.com/Cuel/json-to-sqm/issues"
+  "url" : "https://github.com/Cuel/json-to-sqm/issues"
   },
   "keywords": ["arma", "sqm", "json-sqm"]
 }
