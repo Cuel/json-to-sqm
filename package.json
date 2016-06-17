@@ -9,7 +9,7 @@
   "author": "cuel",
   "license": "WTFPL",
   "devDependencies": {
-    "arma-class-parser": "^0.1.2",
+    "arma-class-parser": "^0.1.3",
     "tape": "^4.4.0"
   },
   "repository" : {
