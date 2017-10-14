@@ -9,8 +9,8 @@ Outputs SQM files from valid JSON, based on output from [arma-class-parser](http
 ## Usage
 
 ```
-var JsonToSqm = require('json-to-sqm')
-var res = JsonToSqm({"Mission": {}})
+var jsonToSqm = require('json-to-sqm')
+var res = jsonToSqm({"Mission": {}})
 ```
 
 ## Tests
